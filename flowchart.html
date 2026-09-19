@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Flowchart</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: "Georgia", serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-left: 1rem;
+    }
+
+    .node {
+      border-left: 2px solid #66ccff;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .node::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 0;
+      bottom: 0;
+      border-left: 2px solid #66ccff;
+    }
+
+    .node > .title {
+      font-weight: bold;
+      color: #66ccff;
+      margin-bottom: 0.3rem;
+    }
+
+    .children {
+      margin-left: 1.5rem;
+      border-left: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #66ccff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover { color: #99ddff; }
+  </style>
+</head>
+<body>
+  <h1>Interactive Story Flowchart</h1>
+
+  <div class="flowchart">
+    <div class="node">
+      <div class="title">index.html (Synopsis)</div>
+      <div class="children">
+        <div class="node">
+          <div class="title">exterior.html (Front of House)</div>
+          <div class="children">
+            <div class="node">
+              <div class="title">front-hall.html</div>
+              <div class="children">
+                <div class="node">
+                  <div class="title">living-room.html</div>
+                  <div class="children">
+                    <div class="node">hidden-room.html
+                      <div class="children">
+                        <div class="node">ending-caretaker.html</div>
+                        <div class="node">kitchen.html</div>
+                      </div>
+                    </div>
+                    <div class="node">kitchen.html</div>
+                  </div>
+                </div>
+                <div class="node">
+                  <div class="title">upstairs-hall.html</div>
+                  <div class="children">
+                    <div class="node">childs-bedroom.html
+                      <div class="children">
+                        <div class="node">ending-caretaker.html</div>
+                        <div class="node">ending-house.html</div>
+                      </div>
+                    </div>
+                    <div class="node">hidden-room.html</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="node">
+              <div class="title">backyard.html</div>
+              <div class="children">
+                <div class="node">living-room.html</div>
+                <div class="node">
+                  basement.html
+                  <div class="children">
+                    <div class="node">ending-house.html</div>
+                    <div class="node">kitchen.html</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="node">ending-empty-lot.html (Accessible from kitchen)</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html">Back to Home</a>
+</body>
+</html>

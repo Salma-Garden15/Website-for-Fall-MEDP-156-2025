@@ -1,0 +1,22 @@
+
+title: "My Website"
+description: "A personal website built with Jekyll"
+url: "https://example.com"   # your site URL
+baseurl: ""                  # the subpath of your site, e.g. /blog
+
+
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: "/page:num/"

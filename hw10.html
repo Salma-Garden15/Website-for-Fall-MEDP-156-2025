@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The House That Remembers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background:#0d0d0d;
+      color:#f0f0f0;
+      font-family: Georgia, serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 90%;
+      display: block;
+      margin: 2rem auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    a {
+      color: #e06666;
+      display: block;
+      margin: 0.75rem 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ---------- Fade In ---------- */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ---------- Flicker ---------- */
+    .flicker:hover {
+      animation: flicker 0.15s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%   { opacity: 1; }
+      25%  { opacity: 0.4; }
+      50%  { opacity: 0.8; }
+      75%  { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+
+    /* ---------- Heartbeat ---------- */
+    .heartbeat:hover {
+      animation: heartbeat 1.2s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%   { transform: scale(1); }
+      20%  { transform: scale(1.05); }
+      40%  { transform: scale(1); }
+      60%  { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The House That Remembers</h1>
+  <h5>Salma's Homework 10 – Interactive Story</h5>
+
+  <img src="images/sinopsis.png" alt="The house at night">
+
+  <div class="fade-in">
+    <p>
+      Every town has a house no one talks about.  
+      On Briar Lane, it waits—empty, breathing, remembering.
+    </p>
+
+    <p>
+      You don’t remember why you came.  
+      Only that the door looks familiar.
+    </p>
+  </div>
+
+  <a class="flicker heartbeat" href="exterior.html">Begin the Story</a>
+  <a href="flowchart.html">View Story Flowchart</a>
+
+  <a href="index.html">Back to Home</a>
+</body>
+</html>
